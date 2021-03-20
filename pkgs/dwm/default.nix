@@ -12,7 +12,7 @@ in stdenv.mkDerivation {
 
   prePatch = ''sed -i "s@/usr/local@$out@" config.mk'';
 
-  buildPhase = " ls .. && ls && patch -p1 < ./dwm-6.1-center.diff && make ";
+  buildPhase = " make ";
 
   meta = {
     homepage = "https://suckless.org/";

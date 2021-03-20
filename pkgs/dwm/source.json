@@ -1,7 +1,7 @@
 {
-  "url": "http://git.suckless.org/dwm",
-  "rev": "61bb8b2241d4db08bea4261c82e27cd9797099e7",
-  "sha256": "1j3vly8dln35vnwnwwlaa8ql9fmnlmrv43jcyc8dbfhfxiw6f34l",
+  "url": "https://github.com/uleenucks/dwm/archive/refs/heads/main.zip",
+  "rev": "master",
+  "sha256": "16d85nxrxvj6d7fmc2ws8l5ggjllw757d41n76iq9dvzfhqk60yc",
   "fetchSubmodules": false,
   "deepClone": false
 }

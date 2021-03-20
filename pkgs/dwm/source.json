@@ -3,6 +3,5 @@
   "rev": "61bb8b2241d4db08bea4261c82e27cd9797099e7",
   "sha256": "1p73vbizvk37nwzasnb6lx0iwxbkgscmal5b6kyng9k82mfg9q9m",
   "fetchSubmodules": false,
-  "deepClone": false,
-  "leaveDotgit": false
+  "deepClone": false
 }

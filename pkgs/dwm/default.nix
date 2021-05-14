@@ -18,6 +18,6 @@ in stdenv.mkDerivation {
     homepage = "https://suckless.org/";
     description = "Dynamic window manager for X";
     license = stdenv.lib.licenses.mit;
-    platforms = with stdenv..lib.platforms; all;
+    platforms = with stdenv.lib.platforms; all;
   };
 }

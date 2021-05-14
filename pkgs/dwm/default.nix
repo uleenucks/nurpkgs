@@ -17,7 +17,7 @@ in stdenv.mkDerivation {
   meta = {
     homepage = "https://suckless.org/";
     description = "Dynamic window manager for X";
-    license = stdenv.lib.licenses.mit;
-    platforms = with stdenv.lib.platforms; all;
+    license = pkgs.lib.licenses.mit;
+    platforms = with pkgs.lib.platforms; all;
   };
 }

@@ -4,7 +4,7 @@ let
   pname = "dwm";
   version = "6.2-uleenucks";
 in stdenv.mkDerivation {
-  inherit pname version;
+  inherit pname version pkgs;
 
   src = fetchgit (builtins.fromJSON (builtins.readFile ./source.json));
 

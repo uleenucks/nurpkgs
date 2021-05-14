@@ -4,7 +4,7 @@ let
   pname = "dwm";
   version = "6.2-uleenucks";
 in stdenv.mkDerivation {
-  inherit pname version lib;
+  inherit pname version;
 
   src = fetchgit (builtins.fromJSON (builtins.readFile ./source.json));
 
@@ -17,7 +17,7 @@ in stdenv.mkDerivation {
   meta = {
     homepage = "https://suckless.org/";
     description = "Dynamic window manager for X";
-    license = lib.licenses.mit;
-    platforms = with lib.platforms; all;
+    license = stdenv.lib.licenses.mit;
+    platforms = with stdenv.lib.platforms; all;
   };
 }

@@ -1,4 +1,4 @@
-{ stdenv, fetchgit, libX11, libXinerama, libXft }:
+{ stdenv, fetchgit, pkgconfig, libX11, ncurses, libXft }:
 
 let
   pname = "st";
@@ -8,11 +8,16 @@ in stdenv.mkDerivation {
 
   src = fetchgit (builtins.fromJSON (builtins.readFile ./source.json));
 
-  buildInputs = [ libX11 libXinerama libXft ];
+  nativeBuildInputs = [ pkgconfig ncurses ];
+  buildInputs = [ libX11 libXft ];
 
   prePatch = ''sed -i "s@/usr/local@$out@" config.mk'';
 
   buildPhase = " make ";
+
+  installPhase = ''
+    TERMINFO=$out/share/terminfo make install PREFIX=$out
+  '';
 
   meta = {
     homepage = "https://st.suckless.org/";

@@ -50,7 +50,7 @@ rustPlatform.buildRustPackage rec {
     owner = "alacritty";
     repo = pname;
     rev = "v${version}";
-    sha256 = "1948j57xhqvc5y876s929x9rhd6j0xnw5c91g1zqw2rfncn602g2";
+    sha256 = "04x8k9vjfz86bdrnn36b51riyni9xbka08hrzhywzydfi5ghji4c";
   };
 
   cargoSha256 = "17lyzcj07f0vyki3091vgjd0w8ki11sw5m8gb3bxdph1dl04rria";

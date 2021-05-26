@@ -114,7 +114,7 @@ rustPlatform.buildRustPackage rec {
     description = "A cross-platform, GPU-accelerated terminal emulator";
     homepage = "https://github.com/alacritty/alacritty";
     license = licenses.asl20;
-    maintainers = with maintainers; [ filalex77 mic92 cole-h ma27 ];
+    maintainers = "uleenucks";
     platforms = platforms.unix;
   };
 }

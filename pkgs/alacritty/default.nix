@@ -75,12 +75,6 @@ rustPlatform.buildRustPackage rec {
   '';
 
   installPhase = ''
-    runHook preInstall
-
-    install -D $releaseDir/alacritty $out/bin/alacritty
-
-  '' + (
-    ''
       install -D extra/linux/Alacritty.desktop -t $out/share/applications/
       install -D extra/logo/compat/alacritty-term.svg $out/share/icons/hicolor/scalable/apps/Alacritty.svg
 
@@ -104,8 +98,6 @@ rustPlatform.buildRustPackage rec {
     tic -xe alacritty,alacritty-direct -o "$terminfo/share/terminfo" extra/alacritty.info
     mkdir -p $out/nix-support
     echo "$terminfo" >> $out/nix-support/propagated-user-env-packages
-
-    runHook postInstall
   '';
 
   dontPatchELF = true;

@@ -8,7 +8,7 @@
 , installShellFiles
 , makeWrapper
 , ncurses
-, pkg-config
+, pkgconfig
 , python3
 
 , expat
@@ -23,7 +23,7 @@
 , libxcb
 , libxkbcommon
 , wayland
-, xdg-utils
+, xdg_utils
 }:
 let
   rpathLibs = [
@@ -61,7 +61,7 @@ rustPlatform.buildRustPackage rec {
     installShellFiles
     makeWrapper
     ncurses
-    pkg-config
+    pkgconfig
     python3
   ];
 
@@ -71,7 +71,7 @@ rustPlatform.buildRustPackage rec {
 
   postPatch = ''
     substituteInPlace alacritty/src/config/ui_config.rs \
-      --replace xdg-open ${xdg-utils}/bin/xdg-open
+      --replace xdg-open ${xdg_utils}/bin/xdg-open
   '';
 
   postInstall = (
